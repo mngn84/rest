@@ -13,7 +13,7 @@ module.exports = (req, res) => {
 
     if (path === '/users' && method === 'GET') {
         listUsers(req, res);
-    }else if (path === '/users' && method === 'POST') {
+    } else if (path === '/users' && method === 'POST') {
         createUser(req, res);
     } else if (path.startsWith('/users/') && method === 'GET') {
         getUser(req, res);

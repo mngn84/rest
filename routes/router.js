@@ -7,9 +7,9 @@ module.exports = (req, res) => {
 
     if (path === '/users' || path.startsWith('/users/')) {
         userRoutes(req, res);
-    } else {
+    }  else{
         res.setHeader('Content-Type', 'application/json');
         res.writeHead(404);
-        res.end(JSON.stringify({ message: 'Route not found' }));
+        res.end(JSON.stringify({message: 'Route not found'}));
     }
 }

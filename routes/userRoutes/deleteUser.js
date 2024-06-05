@@ -1,9 +1,8 @@
-const data = require('../../data');
+const data = require('../../sql-data');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     const id = parseInt(req.url.split('/')[2]);
-    const deleted = data.deleteUser(id);
-
+    const deleted = await data.deleteUser(id);
     if (deleted) {
         res.writeHead(204);
         res.end();

@@ -1,4 +1,4 @@
-const data = require('../../data');
+const data = require('../../sql-data');
 
 module.exports = (req, res) => {
     let body = '';
@@ -14,7 +14,7 @@ module.exports = (req, res) => {
         const age = parsedBody.get('age');
 
         const updatedData = { name, age: parseInt(age) };
-        const updated = data.updateUser(id, updatedData);
+        const updated = await data.updateUser(id, updatedData);
 
         if (updated) {
             res.writeHead(200);
