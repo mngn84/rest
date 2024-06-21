@@ -2,3 +2,4 @@ usersbase.db
 node_modules
 .vscode
 .env
+.env.example
